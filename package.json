@@ -28,7 +28,7 @@
 		"dist"
 	],
 	"peerDependencies": {
-		"svelte": "^3.54.0"
+		"svelte": "^4.2.7"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
