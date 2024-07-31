@@ -8,6 +8,7 @@ export default defineConfig({
 		globals: true,
 		environment: 'jsdom'
 	},
+	base: process.env.NODE_ENV === 'production' ? '/svelte-foundry/' : '/',
 	build: {
 		outDir: 'build'
 	}
