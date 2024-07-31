@@ -1,11 +1,15 @@
 {
-	"name": "my-component-library",
-	"version": "1.0.0",
+	"name": "svelte-foundry",
+	"version": "0.1.0",
+	"author": "Douglas Marodin <douglasmarodin@gmail.com> (https://github.com/dmmarodin)",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/dmmarodin/svelte-foundry",
+	"description": "A headless UI library with optional dark theme styling for Svelte. Simple. Made for Tailwind CSS. Customizable through CSS.",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
-		"package": "svelte-kit sync && svelte-package && publint",
+		"package": "svelte-kit sync && svelte-package",
 		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -53,5 +57,8 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"uuid": "^10.0.0"
+	}
 }
