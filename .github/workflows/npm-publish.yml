@@ -38,11 +38,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install SvelteKit
-        run: npm install -D @sveltejs/kit svelte
+      - name: Install SvelteKit and related packages
+        run: npm install -D @sveltejs/kit svelte @sveltejs/package
 
-      - name: Build
-        run: npm run build
+      - name: Sync SvelteKit
+        run: npx svelte-kit sync
+
+      - name: Package
+        run: npx svelte-package
 
       - name: Test
         run: npm test
