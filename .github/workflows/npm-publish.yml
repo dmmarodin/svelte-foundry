@@ -5,9 +5,6 @@ on:
     tags:
       - 'v*'
 
-permissions:
-    contents: write
-
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
@@ -26,12 +23,13 @@ jobs:
 
       - name: Update package.json version
         run: |
-          npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git checkout -b temp-branch
+          npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
           git add package.json
           git commit -m "Bump version to ${{ steps.get_version.outputs.VERSION }}"
-          git push
+          git push origin temp-branch:main
 
       - run: npm ci
       - run: npm run build
