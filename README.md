@@ -1,38 +1,33 @@
-# create-svelte
+# Svelte Foundry - WIP
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+A headless UI library with optional dark theme styling for Svelte. Simple. Made for Tailwind CSS. Customizable through CSS.
 
-## Creating a project
+Check out the [`example page`](https://dmmarodin.github.io/svelte-foundry/).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## images
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+![Example Page](docs/example-page.png)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Components
 
-## Developing
+Currently there are the following components available:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Buttons
+- Text Inputs
+- Checkbox
+- Switch
+- Cards
+- Tab panel
+- Badges
+- Modals with controls
+- Promise based API for toast notifications.
 
-```bash
-npm run dev
+## Roadmap
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- Documentation and examples for each component.
+- Masking and validation for different input types.
+- Radio buttons.
 
-## Building
+## Usage
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Not yet available as a package. Coming soon.
