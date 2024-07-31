@@ -8,6 +8,8 @@ on:
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -16,21 +18,23 @@ jobs:
         with:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
-
+      
       - name: Get version from tag
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/v}
-
+      
       - name: Update package.json version
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
           git checkout -b temp-branch
           npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
           git add package.json
           git commit -m "Bump version to ${{ steps.get_version.outputs.VERSION }}"
-          git push origin temp-branch:main
-
+          git push https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
       - run: npm ci
       - run: npm run build
       - run: npm test
