@@ -25,7 +25,10 @@
 		}
 	},
 	"files": [
-		"dist"
+		"src",
+		"dist",
+		"README.md",
+		"LICENSE"
 	],
 	"peerDependencies": {
 		"svelte": "^4.2.7"
