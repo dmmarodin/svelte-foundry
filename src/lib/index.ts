@@ -1,3 +1,5 @@
+import './styles/styles.scss';
+
 export { default as Button } from './components/Button/button.svelte';
 export { default as Card } from './components/Card/Card.svelte';
 export { default as Input } from './components/Input/input.svelte';
