@@ -1,9 +1,10 @@
 name: Publish to NPM
 
-on:
-  push:
-    tags:
-      - 'v*'
+# Temporarily disabling this action
+# on:
+#   push:
+#     tags:
+#       - 'v*'
 
 jobs:
   publish-npm:
