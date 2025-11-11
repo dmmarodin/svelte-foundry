@@ -3,7 +3,7 @@
 	import uniqueId from '../../utils/uniqueId.js';
 
 	export let id = '';
-	export let value: boolean = false;
+	export let checked: boolean = false;
 	export let disabled = false;
 	export let title: string;
 	export let horizontal = false;
@@ -14,16 +14,16 @@
 </script>
 
 <InputGroup {title} class={className} labelFor={inputId} {horizontal} {disabled}>
-	<input id={inputId} type="checkbox" aria-hidden hidden bind:value disabled />
+	<input id={inputId} type="checkbox" aria-hidden hidden bind:checked disabled />
 	<button
 		class="sk-checkbox"
 		class:disabled
-		on:click={() => !disabled && (value = !value)}
+		on:click={() => !disabled && (checked = !checked)}
 		role="checkbox"
-		aria-checked={value}
+		aria-checked={checked}
 		tabindex={disabled ? -1 : 0}
 	>
-		{#if value}
+		{#if checked}
 			<div class="sk-checkbox__check" />
 		{/if}
 	</button>
