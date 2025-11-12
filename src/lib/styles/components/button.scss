@@ -84,6 +84,15 @@ button.sk-button {
 	cursor: pointer;
 	font-weight: bold;
 	font-size: variables.$text-small;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	& > span {
+		height: 26px;
+		display: flex;
+		align-items: center;
+	}
 
 	@include button_color;
 	@each $key, $color in colors.$accent {
