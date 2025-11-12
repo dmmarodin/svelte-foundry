@@ -14,6 +14,7 @@ $border-width: 2px;
 	color: colors.$text-bright;
 	transition: border-color ease-out 0.1s;
 	border-color: colors.$background-darker;
+	box-shadow: inset 2px 2px 8px 0px rgba(colors.$background-darker, 0.8);
 
 	&.error {
 		padding: calc($vertical-padding - $border-width) calc(1rem - $border-width);
@@ -37,6 +38,7 @@ $border-width: 2px;
 		cursor: not-allowed;
 		background-color: colors.$background-light;
 		border: $border-width solid colors.$background-mid;
+		box-shadow: none;
 	}
 }
 
