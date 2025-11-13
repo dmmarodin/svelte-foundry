@@ -16,10 +16,10 @@
 	export let requiredText = 'required';
 
 	$: inputId = id || uniqueId();
-	$: localClass = ['sk-input', error && 'error'].join(' ');
-	$: error = !disabled && required && !value ? requiredText : '';
+	$: localClass = ['sk-input', internalError && 'error'].join(' ');
+	$: internalError = !disabled && required && !value ? requiredText : error;
 </script>
 
-<InputGroup {title} class={className} labelFor={inputId} {error} {horizontal} {disabled}>
+<InputGroup {title} class={className} labelFor={inputId} error={internalError} {horizontal} {disabled}>
 	<input type="text" id={inputId} class={localClass} {placeholder} bind:value {disabled} />
 </InputGroup>

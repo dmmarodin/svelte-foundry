@@ -104,6 +104,7 @@
 					<Input title="Normal" />
 					<Input title="Required" required />
 					<Input title="Disabled" disabled />
+					<Input title="Horizontal" horizontal required />
 				</div>
 				<div class="inline-flex flex-col gap-2">
 					<Select title="Country" class="ml-4" nullable>

@@ -16,10 +16,10 @@
 
 	$: inputId = id || uniqueId();
 	$: localClass = ['sk-select', error && 'error'].join(' ');
-	$: error = required && !value ? requiredText : '';
+	$: internalError = !disabled && required && !value ? requiredText : error;
 </script>
 
-<InputGroup {title} class={className} labelFor={inputId} {error} {horizontal} {disabled}>
+<InputGroup {title} class={className} labelFor={inputId} error={internalError} {horizontal} {disabled}>
 	<div class="sk-select__wrapper">
 		<select class={localClass} {disabled} bind:value>
 			{#if nullable}
