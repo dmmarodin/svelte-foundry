@@ -1,6 +1,6 @@
-@use '../mixins';
-@use '../variables';
-@use '../colors';
+@use '../base/mixins';
+@use '../base/variables';
+@use '../base/colors';
 
 .sk-pill {
 	display: inline-block;

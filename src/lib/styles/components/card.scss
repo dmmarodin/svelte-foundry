@@ -1,7 +1,7 @@
-@use '../colors';
-@use '../variables';
-@use '../shadow';
-@use '../mixins';
+@use '../base/colors';
+@use '../base/variables';
+@use '../base/shadow';
+@use '../base/mixins';
 
 .sk-card {
 	padding: 25px;

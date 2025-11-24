@@ -1,5 +1,5 @@
-@use "../colors";
-@use "../variables";
+@use "../base/colors";
+@use "../base/variables";
 
 .sk-input__group__label {
     font-size: variables.$text-mid;

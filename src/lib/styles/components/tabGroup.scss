@@ -1,6 +1,6 @@
-@use '../colors';
-@use '../variables';
-@use '../shadow';
+@use '../base/colors';
+@use '../base/variables';
+@use '../base/shadow';
 
 $tab-transition: all ease-out 0.2s;
 

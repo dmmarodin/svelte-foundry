@@ -12,8 +12,8 @@
 </div>
 
 <style lang="scss" scoped>
-	@use '../../styles/colors';
-	@use '../../styles/mixins';
+	@use '../../styles/base/colors';
+	@use '../../styles/base/mixins';
 
 	svg path {
 		fill: colors.$accent-blue;

@@ -1,6 +1,6 @@
-@use "../colors";
-@use "../variables";
-@use "../shadow";
+@use "../base/colors";
+@use "../base/variables";
+@use "../base/shadow";
 
 $radius: variables.$radius-large;
 $outside-padding: 1.2rem;

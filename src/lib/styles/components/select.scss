@@ -1,5 +1,5 @@
-@use '../colors';
-@use '../variables';
+@use '../base/colors';
+@use '../base/variables';
 @use './input.scss';
 
 $vertical-padding: 0.45rem;
@@ -12,7 +12,7 @@ $padding-right: $caret-width * 2 + 10px;
 }
 
 .sk-select {
-	@include base_input;
+	@include input.base_input;
 
 	& {
 		appearance: none;

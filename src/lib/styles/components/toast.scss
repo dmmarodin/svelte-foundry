@@ -1,7 +1,7 @@
-@use '../colors';
-@use '../variables';
-@use '../mixins';
-@use '../shadow';
+@use '../base/colors';
+@use '../base/variables';
+@use '../base/mixins';
+@use '../base/shadow';
 
 $toast-padding: 1.3rem 1.3rem;
 

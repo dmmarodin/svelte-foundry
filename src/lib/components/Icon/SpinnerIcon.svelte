@@ -10,8 +10,8 @@
 </div>
 
 <style lang="scss" scoped>
-	@use '../../styles/colors';
-	@use '../../styles/mixins';
+	@use '../../styles/base/colors';
+	@use '../../styles/base/mixins';
 
 	.sk-spinner {
 		width: 35px;
