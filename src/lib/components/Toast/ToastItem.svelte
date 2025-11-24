@@ -31,7 +31,7 @@
 </script>
 
 <div
-	aria-hidden
+	aria-hidden="true"
 	on:click={() => onClick()}
 	class="sk-toast min-w-[300px]"
 	class:clickable={item.opts.onClick}
@@ -39,11 +39,11 @@
 >
 	<div class="sk-toast__wrapper">
 		<svelte:component this={item.component} toast={item} />
-		<div aria-hidden class="sk-toast__close" on:click={onClickClose}>
-			<div class="sk-toast__close__icon" />
+		<div aria-hidden="true" class="sk-toast__close" on:click={onClickClose}>
+			<div class="sk-toast__close__icon"></div>
 		</div>
 	</div>
 	{#if item.opts.progress}
-		<div class="sk-toast__progress-bar" style:width={$progress * 100 + '%'} />
+		<div class="sk-toast__progress-bar" style:width={$progress * 100 + '%'}></div>
 	{/if}
 </div>

@@ -14,7 +14,7 @@
 </script>
 
 <InputGroup {title} class={className} labelFor={inputId} {horizontal} {disabled}>
-	<input id={inputId} type="checkbox" aria-hidden hidden bind:checked disabled />
+	<input id={inputId} type="checkbox" aria-hidden="true" hidden bind:checked disabled />
 	<button
 		class="sk-checkbox"
 		class:disabled
@@ -24,7 +24,7 @@
 		tabindex={disabled ? -1 : 0}
 	>
 		{#if checked}
-			<div class="sk-checkbox__check" />
+			<div class="sk-checkbox__check"></div>
 		{/if}
 	</button>
 </InputGroup>

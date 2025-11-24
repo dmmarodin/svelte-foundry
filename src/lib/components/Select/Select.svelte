@@ -27,6 +27,6 @@
 			{/if}
 			<slot />
 		</select>
-		<div class="sk-select__caret" />
+		<div class="sk-select__caret"></div>
 	</div>
 </InputGroup>
