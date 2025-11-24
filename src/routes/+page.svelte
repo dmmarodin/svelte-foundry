@@ -173,6 +173,20 @@
 				Show Toast
 			</Button>
 		</div>
+		<div class="flex gap-2 mt-2">
+			<Button class="icon red">A</Button>
+			<Button class="icon yellow">A</Button>
+			<Button class="icon blue">A</Button>
+			<Button class="icon purple">A</Button>
+			<Button class="icon green">A</Button>
+			<Button class="icon mute">A</Button>
+			<Button class="icon red outline">B</Button>
+			<Button class="icon yellow outline">B</Button>
+			<Button class="icon blue outline">B</Button>
+			<Button class="icon purple outline">B</Button>
+			<Button class="icon green outline">B</Button>
+			<Button class="icon mute outline">B</Button>
+		</div>
 	</Card>
 	<Modal title="Teste" show={showModal} on:close={() => (showModal = false)}>
 		<p class="mb-4">This is a modal that can contain any other elements as content.</p>
