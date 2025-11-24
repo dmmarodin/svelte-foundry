@@ -34,7 +34,8 @@
 			"svelte": "./dist/index.js",
 			"default": "./dist/index.js"
 		},
-		"./styles": "./dist/styles/styles.scss"
+		"./styles": "./dist/styles/styles.scss",
+		"./colors": "./dist/styles/colors.scss"
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0"
