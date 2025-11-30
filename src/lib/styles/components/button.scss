@@ -44,6 +44,10 @@ $outline-border-width: 3px;
 			background-color: $color;
 			color: colors.$text-white;
 
+			&:not(:hover).subtle {
+				background-color: transparent;
+			}
+
 			@include hover_brightness;
 		}
 
@@ -61,6 +65,12 @@ $outline-border-width: 3px;
 
 			&.icon {
 				padding: $padding-vertical;
+			}
+
+			&.subtle {
+				background-color: transparent;
+				border: none;
+				color: $color;
 			}
 
 			&:hover {
